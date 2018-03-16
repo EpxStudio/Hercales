@@ -153,6 +153,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 4294966985
+  edgePercent: 0.7
 --- !u!212 &212835806342451206
 SpriteRenderer:
   m_ObjectHideFlags: 1

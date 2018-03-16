@@ -10,15 +10,23 @@ public class PlayerControls : MonoBehaviour
 	public BoxCollider2D coll;
 	public float raycastDistance = 0.1f;
 	public LayerMask mask;
-	public float edgePercent = 0.1f;
+	public float edgePercent;
 
 	private bool isStanding = false;
 
 	private void Update()
 	{
 		Vector2 bottom = transform.position + new Vector3(0, coll.offset.y - coll.bounds.extents.y, 0);
-		RaycastHit2D hit = Physics2D.Raycast(bottom, Vector2.down, raycastDistance, mask);
+		Vector2 bottomExtent = new Vector2(edgePercent * coll.bounds.extents.x, 0);
+		Vector2 bottomLeft = bottom - bottomExtent;
+		Vector2 bottomRight = bottom + bottomExtent;
+		RaycastHit2D hit = Physics2D.Raycast(bottomLeft, Vector2.down, raycastDistance, mask);
 		isStanding = hit.collider != null;
+		if(!isStanding)
+		{
+			hit = Physics2D.Raycast(bottomRight, Vector2.down, raycastDistance, mask);
+			isStanding = hit.collider != null;
+		}
 
 		anim.SetBool("isStanding", isStanding);
 		anim.SetFloat("ySpeed", rb.velocity.y);
@@ -36,7 +44,11 @@ public class PlayerControls : MonoBehaviour
 	private void OnDrawGizmos()
 	{
 		Vector2 bottom = transform.position + new Vector3(0, coll.offset.y - coll.bounds.extents.y, 0);
-		Gizmos.DrawLine(bottom, bottom + Vector2.down * raycastDistance);
+		Vector2 bottomExtent = new Vector2(edgePercent * coll.bounds.extents.x, 0);
+		Vector2 bottomLeft = bottom - bottomExtent;
+		Vector2 bottomRight = bottom + bottomExtent;
+		Gizmos.DrawLine(bottomLeft, bottomLeft + Vector2.down * raycastDistance);
+		Gizmos.DrawLine(bottomRight, bottomRight + Vector2.down * raycastDistance);
 	}
 
 	private void Jump(Rigidbody2D jumper, Vector2 apexPosition)
