@@ -21,11 +21,11 @@ public class PlayerControls : MonoBehaviour
 		Vector2 bottomLeft = bottom - bottomExtent;
 		Vector2 bottomRight = bottom + bottomExtent;
 		RaycastHit2D hit = Physics2D.Raycast(bottomLeft, Vector2.down, raycastDistance, mask);
-		isStanding = hit.collider != null || !hit.collider.isTrigger;
-		if(!isStanding)
+		isStanding = hit.collider != null;
+		if (!isStanding)
 		{
 			hit = Physics2D.Raycast(bottomRight, Vector2.down, raycastDistance, mask);
-			isStanding = hit.collider != null || !hit.collider.isTrigger;
+			isStanding = hit.collider != null;
 		}
 
 		anim.SetBool("isStanding", isStanding);
