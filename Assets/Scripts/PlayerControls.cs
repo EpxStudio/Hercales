@@ -22,7 +22,7 @@ public class PlayerControls : Arc
 		Vector2 bottomRight = bottom + bottomExtent;
 		RaycastHit2D hit = Physics2D.Raycast(bottomLeft, Vector2.down, raycastDistance, mask);
 		isStanding = hit.collider != null;
-		if(!isStanding)
+		if (!isStanding)
 		{
 			hit = Physics2D.Raycast(bottomRight, Vector2.down, raycastDistance, mask);
 			isStanding = hit.collider != null;
