@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4580176060573848}
   - component: {fileID: 212835806342451206}
   - component: {fileID: 95621243674511394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114280107347107082}
   - component: {fileID: 50834930002307658}
   - component: {fileID: 61534494107134734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61534494107134734
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -116,7 +116,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1771405}
+  m_Size: {x: 0.52, y: 1.1771405}
   m_EdgeRadius: 0
 --- !u!95 &95621243674511394
 Animator:
@@ -148,6 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 95621243674511394}
   rb: {fileID: 50834930002307658}
+  coll: {fileID: 61534494107134734}
+  raycastDistance: 0.1
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294966985
 --- !u!212 &212835806342451206
 SpriteRenderer:
   m_ObjectHideFlags: 1
