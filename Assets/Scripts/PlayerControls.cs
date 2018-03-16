@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-public class PlayerControls : MonoBehaviour
+public class PlayerControls : Arc
 {
 	public Animator anim;
 	public Rigidbody2D rb;
@@ -32,8 +32,7 @@ public class PlayerControls : MonoBehaviour
 		anim.SetFloat("ySpeed", rb.velocity.y);
 		if (Input.GetMouseButtonDown(0))
 		{
-			// TODO: position of object at middle (maybe use center of mass?)
-			this.Jump(rb, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+			this.Apex(rb, Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		}
 		if (rb.velocity.x > 0.01)
 			anim.transform.localScale = new Vector3(1, 1, 1);
@@ -49,21 +48,5 @@ public class PlayerControls : MonoBehaviour
 		Vector2 bottomRight = bottom + bottomExtent;
 		Gizmos.DrawLine(bottomLeft, bottomLeft + Vector2.down * raycastDistance);
 		Gizmos.DrawLine(bottomRight, bottomRight + Vector2.down * raycastDistance);
-	}
-
-	private void Jump(Rigidbody2D jumper, Vector2 apexPosition)
-	{
-		Vector2 delta = apexPosition - jumper.position;
-
-		if (delta.y > 0)
-		{
-			float vy, vx, dt, gravity;
-			gravity = Physics.gravity.y * jumper.gravityScale;
-			vy = Mathf.Sqrt(-2 * delta.y * gravity);
-			dt = Mathf.Sqrt(-2 * delta.y / gravity);
-			vx = delta.x / dt;
-
-			jumper.velocity = new Vector2(vx, vy);
-		}
 	}
 }
