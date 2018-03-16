@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -113,22 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1052472181 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1632956993678798, guid: c5c77664d2d004c178db841c7db566e8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2109105110}
---- !u!114 &1052472185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1052472181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5141ca2504a364cb9ac0bb71588b94df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1094447437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1220,7 @@ GameObject:
   - component: {fileID: 1513730404}
   - component: {fileID: 1513730406}
   - component: {fileID: 1513730407}
+  - component: {fileID: 1513730408}
   m_Layer: 9
   m_Name: Bull
   m_TagString: Untagged
@@ -1345,6 +1330,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.84, y: 1.54}
   m_EdgeRadius: 0
+--- !u!114 &1513730408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1513730403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184142cf1c796b94aa1ae6009243d54f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCursor: {fileID: 2800000, guid: b5ef01d59decf8a46bd94961bbffcf6f, type: 3}
 --- !u!1001 &2109105110
 Prefab:
   m_ObjectHideFlags: 0
@@ -1384,11 +1381,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1632956993678798, guid: c5c77664d2d004c178db841c7db566e8, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114885996390084492, guid: c5c77664d2d004c178db841c7db566e8, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5c77664d2d004c178db841c7db566e8, type: 2}
   m_IsPrefabParent: 0

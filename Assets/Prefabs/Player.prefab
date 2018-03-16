@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4567534557807878}
   - component: {fileID: 212462343081398268}
   - component: {fileID: 61968360394925522}
-  - component: {fileID: 114885996390084492}
+  - component: {fileID: 114719253899860560}
   m_Layer: 8
   m_Name: Grab
   m_TagString: Untagged
@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114280107347107082}
   - component: {fileID: 50834930002307658}
   - component: {fileID: 61534494107134734}
+  - component: {fileID: 114008956355301104}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969337667940446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.96, y: -2.99, z: 0}
+  m_LocalPosition: {x: -0.84, y: -2.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4567534557807878}
@@ -123,7 +124,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61534494107134734
 BoxCollider2D:
@@ -192,6 +193,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114008956355301104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969337667940446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0985aedefc0f89047ae4ada4e7bcf49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  defaultCursor: {fileID: 2800000, guid: 44194fbbe98d7404183432d445aff193, type: 3}
 --- !u!114 &114280107347107082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +227,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294966985
   edgePercent: 0.7
---- !u!114 &114885996390084492
+--- !u!114 &114719253899860560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
