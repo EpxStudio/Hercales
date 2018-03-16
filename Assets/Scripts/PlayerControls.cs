@@ -14,6 +14,10 @@ public class PlayerControls : Arc
 
 	private bool isStanding = false;
 
+    private void Start () {
+        this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10.0f);
+    }
+
 	private void Update()
 	{
 		Vector2 bottom = transform.position + new Vector3(0, coll.offset.y - coll.bounds.extents.y, 0);
