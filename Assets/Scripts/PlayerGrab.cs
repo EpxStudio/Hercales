@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class grab : MonoBehaviour {
+public class PlayerGrab : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,7 +11,6 @@ public class grab : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(1)) {
-		}
+
 	}
 }
