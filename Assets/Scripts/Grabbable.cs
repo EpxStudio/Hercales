@@ -39,9 +39,8 @@ public class Grabbable : MonoBehaviour, IMouseClickable
 		}
 	}
 
-	public void OnClick()
+	public bool OnClick()
 	{
-        Debug.Log(isGrabbed);
 		if (isGrabbable)
 		{
 			if (isGrabbed)
@@ -53,7 +52,10 @@ public class Grabbable : MonoBehaviour, IMouseClickable
 			{
 				showSelect(true);
 			}
+            return true;
 		}
+
+        return false;
 	}
 
 	private void showSelect(bool show)

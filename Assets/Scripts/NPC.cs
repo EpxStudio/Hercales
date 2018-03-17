@@ -5,8 +5,9 @@ public class NPC : MonoBehaviour, IMouseClickable
 	public string[] dialogueLines;
 	public bool[] isPlayerSpeaking;
 
-	public void OnClick()
+	public bool OnClick()
 	{
 		DialogueSystem.Speak(dialogueLines, isPlayerSpeaking);
+        return true;
 	}
 }

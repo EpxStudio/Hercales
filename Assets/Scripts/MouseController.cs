@@ -59,8 +59,7 @@ public class MouseController : MonoBehaviour
 					IMouseClickable m = s.GetComponent<IMouseClickable>();
 					if (m != null)
                     {
-						m.OnClick();
-                        clickAction = true;
+						clickAction = m.OnClick() || clickAction;
                     }
 				}
 			}
