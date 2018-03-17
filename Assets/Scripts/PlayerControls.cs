@@ -36,10 +36,6 @@ public class PlayerControls : MonoBehaviour
 
 		anim.SetBool("isStanding", isStanding);
 		anim.SetFloat("ySpeed", rb.velocity.y);
-		if (Input.GetMouseButtonDown(0) && !MouseController.WaitingOnDialogue)
-		{
-			Arc.Apex(rb, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-		}
 		if (rb.velocity.x > 0.01)
 			anim.transform.localScale = new Vector3(1, 1, 1);
 		if (rb.velocity.x < -0.01)

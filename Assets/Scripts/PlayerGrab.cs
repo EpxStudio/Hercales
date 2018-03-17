@@ -1,22 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerGrab : MonoBehaviour {
+public class PlayerGrab : MonoBehaviour
+{
+	public MouseController mouse;
 
-    void OnTriggerEnter2D (Collider2D inRange) {
-        if (inRange.gameObject.layer != 9) {
-            return;
-        }
-        
-        inRange.gameObject.AddComponent(typeof(Grabbable));
-    }
+	void OnTriggerEnter2D(Collider2D inRange)
+	{
+		Grabbable g = inRange.GetComponent<Grabbable>();
+		if (g != null)
+		{
+			mouse.grabbed = g;
+			g.isGrabbable = true;
+		}
+	}
 
-    void OnTriggerExit2D (Collider2D inRange) {
-        if (inRange.gameObject.layer != 9) {
-            return;
-        }
-        
-        Destroy(inRange.gameObject.GetComponent<Grabbable>());
-    }
+	void OnTriggerExit2D(Collider2D inRange)
+	{
+		Grabbable g = inRange.GetComponent<Grabbable>();
+		if (g != null)
+		{
+			if (mouse.grabbed == g)
+				mouse.grabbed = null;
+			g.isGrabbable = false;
+		}
+	}
 }
