@@ -208,6 +208,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   defaultCursor: {fileID: 2800000, guid: 44194fbbe98d7404183432d445aff193, type: 3}
+  defaultNoCursor: {fileID: 2800000, guid: c8a05c3186e468f4694b12d8e1915e71, type: 3}
   chatCursor: {fileID: 2800000, guid: bdc4ce609417c6f4eab82211e7cc1ea1, type: 3}
   grabbed: {fileID: 0}
 --- !u!114 &114280107347107082
