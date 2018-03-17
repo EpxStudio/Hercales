@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5ade60197127e48b23c6da431ef418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gotoScene: Overworld
+  gotoScene: Scene3
 --- !u!1001 &1225695831
 Prefab:
   m_ObjectHideFlags: 0
