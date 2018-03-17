@@ -39,7 +39,7 @@ public class Grabbable : MonoBehaviour, IMouseClickable
 		}
 	}
 
-	public bool OnClick()
+	public bool OnClick(MouseController mouse)
 	{
 		if (isGrabbable)
 		{
@@ -51,6 +51,7 @@ public class Grabbable : MonoBehaviour, IMouseClickable
 			else
 			{
 				showSelect(true);
+                mouse.grabbed = this;
 			}
             return true;
 		}
