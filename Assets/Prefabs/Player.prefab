@@ -208,6 +208,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   defaultCursor: {fileID: 2800000, guid: 44194fbbe98d7404183432d445aff193, type: 3}
+  chatCursor: {fileID: 2800000, guid: bdc4ce609417c6f4eab82211e7cc1ea1, type: 3}
 --- !u!114 &114280107347107082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 95621243674511394}
   rb: {fileID: 50834930002307658}
+  centerShiftPercent: 0.25
   coll: {fileID: 61534494107134734}
   raycastDistance: 0.1
   mask:

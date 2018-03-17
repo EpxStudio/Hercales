@@ -5,6 +5,7 @@ public class PlayerControls : MonoBehaviour
 {
 	public Animator anim;
 	public Rigidbody2D rb;
+	public float centerShiftPercent;
 
 	[Header("Standing Detection")]
 	public BoxCollider2D coll;
@@ -15,7 +16,8 @@ public class PlayerControls : MonoBehaviour
 	private bool isStanding = false;
 
     private void Start () {
-        this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10.0f);
+		rb.velocity = new Vector2(0f, 10.0f);
+		rb.centerOfMass -= new Vector2(0, coll.bounds.extents.y * centerShiftPercent);
     }
 
 	private void Update()
