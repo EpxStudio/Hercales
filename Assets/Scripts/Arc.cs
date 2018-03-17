@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arc : MonoBehaviour {
-	public void Apex(Rigidbody2D obj, Vector2 apexPosition)
+public class Arc
+{
+	public static void Apex(Rigidbody2D obj, Vector2 apexPosition)
 	{
 		Vector2 delta = apexPosition - obj.position;
 

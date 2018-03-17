@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-public class PlayerControls : Arc
+public class PlayerControls : MonoBehaviour
 {
 	public Animator anim;
 	public Rigidbody2D rb;
@@ -38,7 +38,7 @@ public class PlayerControls : Arc
 		anim.SetFloat("ySpeed", rb.velocity.y);
 		if (Input.GetMouseButtonDown(0) && !MouseController.WaitingOnDialogue)
 		{
-			this.Apex(rb, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+			Arc.Apex(rb, Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		}
 		if (rb.velocity.x > 0.01)
 			anim.transform.localScale = new Vector3(1, 1, 1);
