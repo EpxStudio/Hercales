@@ -2,5 +2,6 @@ tutorial--plains & mountain
 Lernaean hydra--plains -> swamp
 Nemean lion--plains -> cave
 Cretan bull--island/farmland
+Erymanthian boar--snowy mountain
 Stymphalian birds--plains -> lake
 Capture Cerberus--Hades/hellscape
