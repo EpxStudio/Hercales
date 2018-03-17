@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 
 public class MouseController : MonoBehaviour
 {
@@ -8,6 +7,8 @@ public class MouseController : MonoBehaviour
 	public LayerMask mask;
 	public Texture2D defaultCursor;
 	public Texture2D chatCursor;
+
+	public Grabbable grabbed;
 
 	private void Awake()
 	{
@@ -24,6 +25,16 @@ public class MouseController : MonoBehaviour
 				WaitingOnDialogue = false;
 				Time.timeScale = 1;
 				DialogueSystem.NextClick();
+			}
+			return;
+		}
+
+		if(grabbed != null && grabbed.isGrabbed)
+		{
+			Cursor.SetCursor(grabbed.defaultCursor, Vector2.zero, CursorMode.Auto);
+			if(Input.GetMouseButtonDown(0))
+			{
+				grabbed.OnClick();
 			}
 			return;
 		}

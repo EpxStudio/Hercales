@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 1513730406}
   - component: {fileID: 1513730407}
   - component: {fileID: 1513730408}
+  - component: {fileID: 1513730409}
   m_Layer: 9
   m_Name: Bull
   m_TagString: Untagged
@@ -435,6 +436,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCursor: {fileID: 2800000, guid: b5ef01d59decf8a46bd94961bbffcf6f, type: 3}
+--- !u!114 &1513730409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1513730403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0919e7d9b58e4b8595c0ea46fb75943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 1513730408}
+  rb: {fileID: 1513730406}
+  inactiveCursor: {fileID: 2800000, guid: 33e4b17fcad261944923c4b4d337a4ac, type: 3}
+  shakeDistance: 0.1
+  isGrabbed: 0
 --- !u!1001 &2109105110
 Prefab:
   m_ObjectHideFlags: 0
