@@ -41,6 +41,7 @@ public class Grabbable : MonoBehaviour, IMouseClickable
 
 	public void OnClick()
 	{
+        Debug.Log(isGrabbed);
 		if (isGrabbable)
 		{
 			if (isGrabbed)
