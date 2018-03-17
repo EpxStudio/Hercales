@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+﻿//using UnityEditor;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
@@ -42,13 +42,13 @@ public class PlayerControls : MonoBehaviour
 			anim.transform.localScale = new Vector3(-1, 1, 1);
 	}
 
-	private void OnDrawGizmos()
-	{
-		Vector2 bottom = transform.position + new Vector3(0, coll.offset.y - coll.bounds.extents.y, 0);
-		Vector2 bottomExtent = new Vector2(edgePercent * coll.bounds.extents.x, 0);
-		Vector2 bottomLeft = bottom - bottomExtent;
-		Vector2 bottomRight = bottom + bottomExtent;
-		Gizmos.DrawLine(bottomLeft, bottomLeft + Vector2.down * raycastDistance);
-		Gizmos.DrawLine(bottomRight, bottomRight + Vector2.down * raycastDistance);
-	}
+	//private void OnDrawGizmos()
+	//{
+	//	Vector2 bottom = transform.position + new Vector3(0, coll.offset.y - coll.bounds.extents.y, 0);
+	//	Vector2 bottomExtent = new Vector2(edgePercent * coll.bounds.extents.x, 0);
+	//	Vector2 bottomLeft = bottom - bottomExtent;
+	//	Vector2 bottomRight = bottom + bottomExtent;
+	//	Gizmos.DrawLine(bottomLeft, bottomLeft + Vector2.down * raycastDistance);
+	//	Gizmos.DrawLine(bottomRight, bottomRight + Vector2.down * raycastDistance);
+	//}
 }

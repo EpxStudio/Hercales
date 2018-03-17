@@ -23,3 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LionPrototype.unity
     guid: f61f0abac18fa4eb29f8e8f3d2793235
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Scene1.unity
+    guid: 46cb3307889976e4384ac3f5b926e8c9
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Scene2.unity
+    guid: 60ced4bf66164904faafb01ff1f992e0

@@ -50,8 +50,8 @@ public class DialogueSystem : MonoBehaviour
 
 	private void updateChat()
 	{
-		npcText.text = chat[i];
 		bool isPlayer = isPlayerSpeaking[i];
+		(isPlayer ? playerText : npcText).text = chat[i];
 		npcWindow.SetActive(!isPlayer);
 		playerWindow.SetActive(isPlayer);
 
