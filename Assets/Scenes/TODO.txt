@@ -1,10 +1,6 @@
-tutorial--plains & mountain NEED POLISH
-Nemean lion--plains -> cave
-Lernaean hydra--plains -> swamnp NEED POLISH
-Erymanthian board--snowy mountain
 Augean stables--city/stable
 Stymphalian birds--plains -> lake
-Cretan bull--island/farmland
 Mares of Diomedes--city
 Capture Cerberus--Hades/hellscape
 fight Zeus (final boss)--Olympus/cloud city/throne room
+Erymanthian board--snowy mountain
