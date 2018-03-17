@@ -7887,7 +7887,37 @@ MonoBehaviour:
   - You and dad were in love and nearly married, but he was killed in battle before
     I was born.
   - "That\u2019s \u2026 one version of the story."
-  isPlayerSpeaking: 0001000100010000010100
+  - . . .
+  - I met him when I was young and we were very much in love.
+  - We lived together happily for a whole summer.
+  - When you were born, he told me the truth. He was a very powerful, rich, and married
+    man.
+  - He knew you would grow up to be the ruler of the land.
+  - "He had to return home when the winter came, and I haven\u2019t seen or spoken
+    to him since."
+  - "That\u2019s very different from the story you told me at bedtime when I was little."
+  - "I know, I\u2019m sorry for lying to you."
+  - Why did you hide it from me?
+  - "Your father\u2019s wife is a very jealous woman, and . . ."
+  - I was worried that, if you called too much attention to yourself, she would smite
+    you.
+  - Surely only the gods could smite me!
+  - Heracles.
+  - Yes?
+  - You are the son of Zeus.
+  - "What\u2014Zeus? Zeus, Lord of Lighting and King of Olympus?"
+  - Yes, now that you have come of age I fear that you are a greater threat to his
+    wife, Hera, more than ever.
+  - A threat? I am only a farmer.
+  - If you remain a farmer much longer Hera will destroy you.
+  - What can I do?
+  - You must travel to Olympus so you can remind Zeus who you are and he can claim
+    you as his son.
+  - Here take this, it was a gift from Zeus.
+  - '[You receive the CLUB OF FIGHT]'
+  - Travel safely, come home soon!
+  - This is a lot to drop on a guy in one morning but sure, bye mom.
+  isPlayerSpeaking: 000100010001000001010000000000000001000100000100010001000100010000010001
 --- !u!61 &1726665830
 BoxCollider2D:
   m_ObjectHideFlags: 0
