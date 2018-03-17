@@ -19,7 +19,7 @@ public class PlayerGrab : MonoBehaviour
 		Grabbable g = inRange.GetComponent<Grabbable>();
 		if (g != null)
 		{
-			if (mouse.grabbed == g)
+			if (mouse.grabbed == g && !mouse.grabbed.isGrabbed)
 				mouse.grabbed = null;
 			g.isGrabbable = false;
 		}

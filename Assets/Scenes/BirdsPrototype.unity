@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 229556966}
   - component: {fileID: 229556965}
   - component: {fileID: 229556964}
+  - component: {fileID: 229556969}
   m_Layer: 9
   m_Name: Owl
   m_TagString: Untagged
@@ -246,6 +247,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &229556969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229556963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0919e7d9b58e4b8595c0ea46fb75943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 229556964}
+  rb: {fileID: 229556966}
+  inactiveCursor: {fileID: 2800000, guid: 33e4b17fcad261944923c4b4d337a4ac, type: 3}
+  shakeDistance: 0.1
+  isGrabbed: 0
 --- !u!1 &267228608
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +275,7 @@ GameObject:
   - component: {fileID: 267228611}
   - component: {fileID: 267228610}
   - component: {fileID: 267228609}
+  - component: {fileID: 267228614}
   m_Layer: 9
   m_Name: Parrot
   m_TagString: Untagged
@@ -379,6 +397,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &267228614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 267228608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0919e7d9b58e4b8595c0ea46fb75943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 267228609}
+  rb: {fileID: 267228611}
+  inactiveCursor: {fileID: 2800000, guid: 33e4b17fcad261944923c4b4d337a4ac, type: 3}
+  shakeDistance: 0.1
+  isGrabbed: 0
 --- !u!1 &615804759
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +425,7 @@ GameObject:
   - component: {fileID: 615804762}
   - component: {fileID: 615804761}
   - component: {fileID: 615804760}
+  - component: {fileID: 615804765}
   m_Layer: 9
   m_Name: Duck
   m_TagString: Untagged
@@ -512,6 +547,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615804765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615804759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0919e7d9b58e4b8595c0ea46fb75943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 615804760}
+  rb: {fileID: 615804762}
+  inactiveCursor: {fileID: 2800000, guid: 33e4b17fcad261944923c4b4d337a4ac, type: 3}
+  shakeDistance: 0.1
+  isGrabbed: 0
 --- !u!1 &1219871665
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +764,7 @@ GameObject:
   - component: {fileID: 1513730406}
   - component: {fileID: 1513730407}
   - component: {fileID: 1513730408}
+  - component: {fileID: 1513730409}
   m_Layer: 9
   m_Name: Chicken
   m_TagString: Untagged
@@ -834,6 +886,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCursor: {fileID: 2800000, guid: b5ef01d59decf8a46bd94961bbffcf6f, type: 3}
+--- !u!114 &1513730409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1513730403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0919e7d9b58e4b8595c0ea46fb75943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 1513730408}
+  rb: {fileID: 1513730406}
+  inactiveCursor: {fileID: 2800000, guid: 33e4b17fcad261944923c4b4d337a4ac, type: 3}
+  shakeDistance: 0.1
+  isGrabbed: 0
 --- !u!1 &1693237194
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +914,7 @@ GameObject:
   - component: {fileID: 1693237197}
   - component: {fileID: 1693237196}
   - component: {fileID: 1693237195}
+  - component: {fileID: 1693237200}
   m_Layer: 9
   m_Name: Chick
   m_TagString: Untagged
@@ -967,6 +1036,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1693237200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693237194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0919e7d9b58e4b8595c0ea46fb75943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 1693237195}
+  rb: {fileID: 1693237197}
+  inactiveCursor: {fileID: 2800000, guid: 33e4b17fcad261944923c4b4d337a4ac, type: 3}
+  shakeDistance: 0.1
+  isGrabbed: 0
 --- !u!1001 &2109105110
 Prefab:
   m_ObjectHideFlags: 0
