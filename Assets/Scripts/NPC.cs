@@ -2,8 +2,11 @@
 
 public class NPC : MonoBehaviour, IMouseClickable
 {
+	public string[] dialogueLines;
+	public bool[] isPlayerSpeaking;
+
 	public void OnClick()
 	{
-		Debug.Log("hi");
+		DialogueSystem.Speak(dialogueLines, isPlayerSpeaking);
 	}
 }

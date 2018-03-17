@@ -34,7 +34,7 @@ public class PlayerControls : Arc
 
 		anim.SetBool("isStanding", isStanding);
 		anim.SetFloat("ySpeed", rb.velocity.y);
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && !MouseController.WaitingOnDialogue)
 		{
 			this.Apex(rb, Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		}

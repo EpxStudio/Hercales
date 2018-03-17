@@ -3,11 +3,31 @@ using UnityEditor;
 
 public class MouseController : MonoBehaviour
 {
+	public static bool WaitingOnDialogue { get; private set; }
+
 	public LayerMask mask;
 	public Texture2D defaultCursor;
+	public Texture2D chatCursor;
+
+	private void Awake()
+	{
+		WaitingOnDialogue = false;
+	}
 
 	public void Update()
 	{
+		if(WaitingOnDialogue)
+		{
+			Cursor.SetCursor(chatCursor, Vector2.zero, CursorMode.Auto);
+			if (Input.GetMouseButtonDown(0))
+			{
+				WaitingOnDialogue = false;
+				Time.timeScale = 1;
+				DialogueSystem.NextClick();
+			}
+			return;
+		}
+
 		Texture2D cursor = defaultCursor;
 
 		Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
@@ -29,5 +49,11 @@ public class MouseController : MonoBehaviour
 			}
 		}
 		Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+	}
+
+	public void OpenDialogue()
+	{
+		WaitingOnDialogue = true;
+		Time.timeScale = 0;
 	}
 }
