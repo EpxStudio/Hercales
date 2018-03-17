@@ -38,7 +38,7 @@ public class MouseController : MonoBehaviour
 			Cursor.SetCursor(grabbed.defaultCursor, Vector2.zero, CursorMode.Auto);
 			if (Input.GetMouseButtonDown(0))
 			{
-				grabbed.OnClick();
+				grabbed.OnClick(this);
 			}
 			return;
 		}
@@ -63,7 +63,7 @@ public class MouseController : MonoBehaviour
 					IMouseClickable m = s.GetComponent<IMouseClickable>();
 					if (m != null)
 					{
-						clickAction = m.OnClick() || clickAction;
+						clickAction = m.OnClick(this) || clickAction;
 					}
 				}
 			}

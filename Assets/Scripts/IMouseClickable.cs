@@ -1,4 +1,4 @@
 ﻿public interface IMouseClickable
 {
-	bool OnClick();
+	bool OnClick(MouseController mouse);
 }
