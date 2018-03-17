@@ -12,7 +12,7 @@ public class Grabbable : MonoBehaviour, IMouseClickable
 	public float shakeDistance = 0.1f;
 
 	public bool isGrabbed = false;
-	private Vector2 center;
+	private Vector3 center;
 
 	private bool grabbable = false;
 	public bool isGrabbable
@@ -35,7 +35,7 @@ public class Grabbable : MonoBehaviour, IMouseClickable
 	{
 		if (isGrabbed)
 		{
-			transform.position = center + Random.insideUnitCircle * shakeDistance;
+			transform.position = (Vector2)center + Random.insideUnitCircle * shakeDistance;
 		}
 	}
 
