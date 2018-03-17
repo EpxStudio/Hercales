@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 
 public class MouseController : MonoBehaviour
 {
@@ -8,6 +7,10 @@ public class MouseController : MonoBehaviour
 	public LayerMask mask;
 	public Texture2D defaultCursor;
 	public Texture2D chatCursor;
+
+	public Grabbable grabbed;
+
+    private bool clickAction;
 
 	private void Awake()
 	{
@@ -28,12 +31,23 @@ public class MouseController : MonoBehaviour
 			return;
 		}
 
+		if(grabbed != null && grabbed.isGrabbed)
+		{
+			Cursor.SetCursor(grabbed.defaultCursor, Vector2.zero, CursorMode.Auto);
+			if(Input.GetMouseButtonDown(0))
+			{
+				grabbed.OnClick();
+			}
+			return;
+		}
+
 		Texture2D cursor = defaultCursor;
 
 		Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
 		point = new Vector3(point.x, point.y, 0);
 
 		Collider2D[] colls = Physics2D.OverlapPointAll(point, mask, 10);
+        clickAction = false;
 		foreach (Collider2D c in colls)
 		{
 			CursorSetter s = c.GetComponent<CursorSetter>();
@@ -44,11 +58,19 @@ public class MouseController : MonoBehaviour
 				{
 					IMouseClickable m = s.GetComponent<IMouseClickable>();
 					if (m != null)
+                    {
 						m.OnClick();
+                        clickAction = true;
+                    }
 				}
 			}
 		}
 		Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+
+        if (Input.GetMouseButtonDown(0) && !clickAction)
+		{
+			Arc.Apex(this.GetComponent<Rigidbody2D>(), Camera.main.ScreenToWorldPoint(Input.mousePosition));
+		}
 	}
 
 	public void OpenDialogue()
